@@ -24,8 +24,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Internal class used for checking version compatibility in a deployed application.
- *
+ * ??????????????????????
  * @author Luke Taylor
  * @author Rob Winch
  */
@@ -36,6 +35,7 @@ public class SpringSecurityCoreVersion {
 	private static final Log logger = LogFactory.getLog(SpringSecurityCoreVersion.class);
 
 	/**
+	 * Spring Security?????? uid???????????????
 	 * Global Serialization value for Spring Security classes.
 	 *
 	 * N.B. Classes are not intended to be serializable between different versions. See
