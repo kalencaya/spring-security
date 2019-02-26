@@ -53,14 +53,12 @@ public interface Authentication extends Principal, Serializable {
 	// ========================================================================================================
 
 	/**
-	 * Set by an <code>AuthenticationManager</code> to indicate the authorities that the
-	 * principal has been granted. Note that classes should not rely on this value as
-	 * being valid unless it has been set by a trusted <code>AuthenticationManager</code>.
-	 * <p>
-	 * Implementations should ensure that modifications to the returned collection array
-	 * do not affect the state of the Authentication object, or use an unmodifiable
-	 * instance.
-	 * </p>
+	 * AuthenticationManager??????Authentication?????????????????
+	 * ?????????
+	 * ??????????????????????????????????????????????
+	 * unmodifiable?????????
+	 * ???AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_ADMIN")
+	 * ?????????
 	 *
 	 * @return the authorities granted to the principal, or an empty collection if the
 	 * token has not been authenticated. Never null.
@@ -68,6 +66,8 @@ public interface Authentication extends Principal, Serializable {
 	Collection<? extends GrantedAuthority> getAuthorities();
 
 	/**
+	 * credentials ?????
+	 * principal ?????? credentials?principal??javax.security???
 	 * The credentials that prove the principal is correct. This is usually a password,
 	 * but could be anything relevant to the <code>AuthenticationManager</code>. Callers
 	 * are expected to populate the credentials.
