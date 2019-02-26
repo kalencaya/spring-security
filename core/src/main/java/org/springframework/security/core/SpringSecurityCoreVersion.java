@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * ??????????????????????
+ * 一个内部类，用来在部署的应用内检测版本兼容性
  * @author Luke Taylor
  * @author Rob Winch
  */
@@ -35,7 +35,7 @@ public class SpringSecurityCoreVersion {
 	private static final Log logger = LogFactory.getLog(SpringSecurityCoreVersion.class);
 
 	/**
-	 * Spring Security?????? uid???????????????
+	 * Spring Security全局的序列化 uid。防止不同版本之间类进行序列化
 	 * Global Serialization value for Spring Security classes.
 	 *
 	 * N.B. Classes are not intended to be serializable between different versions. See
