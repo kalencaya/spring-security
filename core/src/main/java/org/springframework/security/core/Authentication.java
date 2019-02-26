@@ -68,6 +68,7 @@ public interface Authentication extends Principal, Serializable {
 	/**
 	 * credentials ?????
 	 * principal ?????? credentials?principal??javax.security???
+	 * ????????????????
 	 * The credentials that prove the principal is correct. This is usually a password,
 	 * but could be anything relevant to the <code>AuthenticationManager</code>. Callers
 	 * are expected to populate the credentials.
@@ -94,7 +95,7 @@ public interface Authentication extends Principal, Serializable {
 	 * <tt>Authentication</tt> containing richer information as the principal for use by
 	 * the application. Many of the authentication providers will create a
 	 * {@code UserDetails} object as the principal.
-	 *
+	 * ???UserDetails??
 	 * @return the <code>Principal</code> being authenticated or the authenticated
 	 * principal after authentication.
 	 */
